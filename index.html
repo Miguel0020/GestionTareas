@@ -3,48 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Manager</title>
+    <title>Gestor de Tareas</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
 
 <header id="mainHeader">
-    <h1>Task Manager</h1>
+    <h1>Gestor de Tareas</h1>
 </header>
 
 <main>
     <section class="task-form-container">
         <form id="taskForm">
             <div class="form-group">
-                <label for="title">Task Title</label>
-                <input type="text" name="title" id="title" placeholder="Enter task title" required>
+                <label for="title">Titulo de Tarea</label>
+                <input type="text" name="title" id="title" placeholder="Ingrese el nombre de la tarea" required>
             </div>
             <div class="form-group">
-                <label for="description">Description</label>
-                <textarea name="description" id="description" rows="4" placeholder="Enter task description"></textarea>
+                <label for="description">Descripción</label>
+                <textarea name="description" id="description" rows="4" placeholder="Ingrese la descipcion de la tarea"></textarea>
             </div>
             <div class="form-group">
-                <label for="dueDate">Due Date</label>
+                <label for="dueDate">Fecha limite</label>
                 <input type="date" id="dueDate" name="dueDate">
             </div>
             <div class="form-group">
-                <label for="category">Task Type</label>
+                <label for="category">Tipo de Tarea</label>
                 <select name="category" id="category">
-                    <option value="" disabled selected>Select a category</option>
-                    <option value="0">Bug</option>
-                    <option value="1">New Feature</option>
-                    <option value="2">Documentation</option>
+                    <option value="" disabled selected>Selecciona la Categoria</option>
+                    <option value="0">Trabajo</option>
+                    <option value="1">Hogar</option>
+                    <option value="2">Documentación</option>
                 </select>
             </div>
             <div class="button-div">
-                <button class="save" id="save" type="submit">Save Task</button>
-                <button class="clear" id="clear" type="button">Clear</button>
+                <button class="guardar" id="guardar" type="submit">Guardar Tarea</button>
+                <button class="limpiar" id="limpiar" type="button">Limpiar</button>
             </div>
         </form>
     </section>
 
     <section>
-        <h2>Task List</h2>
+        <h2>Lista de tareas</h2>
         <div id="taskContainer" class="task-container">
             <div class="task-column" id="todo">
                 <h3>To Do</h3>

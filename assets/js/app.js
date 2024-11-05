@@ -10,7 +10,7 @@ taskForm.addEventListener('submit', event => {
         description: event.target.description.value,
         dueDate: event.target.dueDate.value,
         category: event.target.category.value,
-        status: "todo" // Estado inicial de la tarea
+        status: "todo" 
     };
 
     taskList.push(task);
@@ -42,11 +42,11 @@ function renderTasks() {
                 ${task.status !== 'todo' ? `<button onclick="updateTaskStatus(${index}, 'todo')">To Do</button>` : ''}
                 ${task.status !== 'doing' ? `<button onclick="updateTaskStatus(${index}, 'doing')">Doing</button>` : ''}
                 ${task.status !== 'done' ? `<button onclick="updateTaskStatus(${index}, 'done')">Done</button>` : ''}
-                <button onclick="deleteTask(${index})">Delete</button>
+                <button onclick="deleteTask(${index})">Eliminar</button>
             </div>
         `;
 
-        // Añadir la tarea a la columna correspondiente según su estado
+        // Se añade la tarea a la columna correspondiente según su estado
         document.querySelector(`#${task.status}`).appendChild(taskDiv);
     });
 }
@@ -54,7 +54,7 @@ function renderTasks() {
 function updateTaskStatus(index, newStatus) {
     taskList[index].status = newStatus;
     localStorage.setItem('taskList', JSON.stringify(taskList));
-    renderTasks(); // Vuelve a renderizar las tareas para reflejar los cambios
+    renderTasks(); 
 }
 
 function deleteTask(index) {
@@ -63,5 +63,4 @@ function deleteTask(index) {
     renderTasks();
 }
 
-// Renderizar las tareas al cargar la página
 renderTasks();

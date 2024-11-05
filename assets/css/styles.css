@@ -57,8 +57,8 @@ main {
     gap: 10px;
 }
 
-.button-div .save, 
-.button-div .clear {
+.button-div .guardar, 
+.button-div .limpiar {
     padding: 10px;
     width: 100%;
     font-weight: bold;
@@ -67,12 +67,12 @@ main {
     cursor: pointer;
 }
 
-.button-div .save {
+.button-div .guardar {
     background-color: #007bff;
     color: white;
 }
 
-.button-div .clear {
+.button-div .limpiar {
     background-color: #f44336;
     color: white;
 }
@@ -86,7 +86,7 @@ main {
     flex: 1;
     padding: 15px;
     border-radius: 8px;
-    background-color: #f0f0f0;
+    background-color: #b42626;
     border: 1px solid #ddd;
     min-height: 200px;
 }
