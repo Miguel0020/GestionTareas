@@ -1,4 +1,4 @@
-/* Esquema de colores */
+/* Estilos generales para todo el sitio */
 :root {
     --color-background: #FCF8E8;
     --color-secondary: #ECDFC8;
@@ -12,6 +12,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    box-sizing: border-box;
 }
 
 header {
@@ -32,10 +33,6 @@ h2, h3 {
 
 main {
     padding: 20px;
-}
-
-.section {
-    margin-bottom: 30px;
 }
 
 .form-group {
@@ -86,6 +83,7 @@ button:focus {
 #taskContainer {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .task-column {
@@ -143,4 +141,75 @@ button.delete-button {
 
 #personList li button:hover {
     background-color: #e56b4d;
+}
+
+/* Media Queries */
+
+/* Móvil medio: 375x667px */
+@media (max-width: 375px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    #taskContainer {
+        flex-direction: column;
+    }
+
+    .task-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+        font-size: 0.9em;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+}
+
+/* Ordenador portátil medio: 1366x768px */
+@media (max-width: 1366px) {
+    #taskContainer {
+        gap: 10px;
+    }
+
+    .task-column {
+        width: 32%;
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+        font-size: 1.1em;
+    }
+
+    button {
+        font-size: 1.1em;
+        padding: 12px 22px;
+    }
+}
+
+/* PC de escritorio grande: 1920x1080px */
+@media (max-width: 1920px) {
+    #taskContainer {
+        gap: 20px;
+    }
+
+    .task-column {
+        width: 30%;
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+        font-size: 1.2em;
+    }
+
+    button {
+        font-size: 1.2em;
+        padding: 15px 25px;
+    }
 }
