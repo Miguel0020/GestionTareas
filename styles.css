@@ -1,0 +1,146 @@
+/* Esquema de colores */
+:root {
+    --color-background: #FCF8E8;
+    --color-secondary: #ECDFC8;
+    --color-highlight: #ECB390;
+    --color-accent: #DF7861;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-background);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: var(--color-highlight);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+h2, h3 {
+    color: var(--color-accent);
+}
+
+main {
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    background-color: var(--color-accent);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #e56b4d;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.button-primary {
+    background-color: var(--color-accent);
+}
+
+.button-secondary {
+    background-color: var(--color-secondary);
+}
+
+button:focus {
+    outline: none;
+}
+
+#taskContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-column {
+    width: 30%;
+    background-color: var(--color-secondary);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task {
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.task-buttons {
+    margin-top: 10px;
+}
+
+.task-buttons button {
+    background-color: var(--color-accent);
+    margin-right: 5px;
+}
+
+button.delete-button {
+    background-color: #ff4d4d;
+    margin-left: 10px;
+}
+
+#personList ul {
+    list-style: none;
+    padding: 0;
+}
+
+#personList li {
+    background-color: var(--color-secondary);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#personList li button {
+    background-color: #ff4d4d;
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#personList li button:hover {
+    background-color: #e56b4d;
+}
