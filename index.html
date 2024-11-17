@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,47 +13,70 @@
 </header>
 
 <main>
+    <section class="person-form-container">
+        <h2>Crear Persona Responsable</h2>
+        <form id="personForm">
+            <div class="form-group">
+                <label for="personName">Nombre</label>
+                <input type="text" name="personName" id="personName" placeholder="Nombre de la persona" required>
+            </div>
+            <button class="button-primary" id="addPerson" type="submit">Agregar Persona</button>
+        </form>
+        <div id="personList">
+            <h3>Personas Responsables</h3>
+            <ul></ul>
+        </div>
+    </section>
+
     <section class="task-form-container">
+        <h2>Crear Tarea</h2>
         <form id="taskForm">
             <div class="form-group">
-                <label for="title">Titulo de Tarea</label>
+                <label for="title">Título de Tarea</label>
                 <input type="text" name="title" id="title" placeholder="Ingrese el nombre de la tarea" required>
             </div>
             <div class="form-group">
                 <label for="description">Descripción</label>
-                <textarea name="description" id="description" rows="4" placeholder="Ingrese la descipcion de la tarea"></textarea>
+                <textarea name="description" id="description" rows="4" placeholder="Ingrese la descripción de la tarea"></textarea>
             </div>
             <div class="form-group">
-                <label for="dueDate">Fecha limite</label>
+                <label for="dueDate">Fecha límite</label>
                 <input type="date" id="dueDate" name="dueDate">
             </div>
             <div class="form-group">
                 <label for="category">Tipo de Tarea</label>
                 <select name="category" id="category">
-                    <option value="" disabled selected>Selecciona la Categoria</option>
+                    <option value="" disabled selected>Selecciona la Categoría</option>
                     <option value="0">Trabajo</option>
                     <option value="1">Hogar</option>
-                    <option value="2">Documentación</option>
+                    <option value="2">Estudio</option>
                 </select>
             </div>
-            <div class="button-div">
-                <button class="guardar" id="guardar" type="submit">Guardar Tarea</button>
-                <button class="limpiar" id="limpiar" type="button">Limpiar</button>
+            <div class="form-group">
+                <label for="responsible">Personas Responsables</label>
+                <select name="responsible" id="responsible" multiple required>
+                </select>
+                <small>Puedes seleccionar múltiples personas manteniendo presionada la tecla <strong>Ctrl</strong> (Windows) o <strong>Cmd</strong> (Mac).</small>
+            </div>
+
+            <div class="button-group">
+                <button class="button-primary" id="guardar" type="submit">Guardar Tarea</button>
+                <button class="button-secondary" id="limpiar" type="button">Limpiar</button>
             </div>
         </form>
     </section>
 
     <section>
-        <h2>Lista de tareas</h2>
+        <h2>Lista de Tareas</h2>
         <div id="taskContainer" class="task-container">
             <div class="task-column" id="todo">
-                <h3>To Do</h3>
+                <h3>Por Hacer</h3>
             </div>
             <div class="task-column" id="doing">
-                <h3>Doing</h3>
+                <h3>En Progreso</h3>
             </div>
             <div class="task-column" id="done">
-                <h3>Done</h3>
+                <h3>Completadas</h3>
             </div>
         </div>
     </section>

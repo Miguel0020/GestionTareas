@@ -1,109 +1,146 @@
-* {
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
+/* Esquema de colores */
+:root {
+    --color-background: #FCF8E8;
+    --color-secondary: #ECDFC8;
+    --color-highlight: #ECB390;
+    --color-accent: #DF7861;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-background);
     margin: 0;
-    padding: 20px;
-    font-size: 16px;
+    padding: 0;
     color: #333;
 }
 
 header {
+    background-color: var(--color-highlight);
+    padding: 20px;
     text-align: center;
-    margin-bottom: 20px;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+h2, h3 {
+    color: var(--color-accent);
 }
 
 main {
-    width: 100%;
-    max-width: 800px;
+    padding: 20px;
 }
 
-.task-form-container {
-    background-color: #f7f7f7;
-    padding: 20px;
-    border-radius: 8px;
+.section {
     margin-bottom: 30px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
     margin-bottom: 15px;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-group input, 
-.form-group textarea, 
-.form-group select {
+input, select, textarea {
     width: 100%;
     padding: 10px;
-    border-radius: 5px;
+    margin-top: 5px;
     border: 1px solid #ccc;
-    font-size: 14px;
+    border-radius: 5px;
+    font-size: 1em;
 }
 
-.button-div {
-    display: flex;
-    gap: 10px;
-}
-
-.button-div .guardar, 
-.button-div .limpiar {
-    padding: 10px;
-    width: 100%;
-    font-weight: bold;
+button {
+    background-color: var(--color-accent);
     border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #e56b4d;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.button-primary {
+    background-color: var(--color-accent);
+}
+
+.button-secondary {
+    background-color: var(--color-secondary);
+}
+
+button:focus {
+    outline: none;
+}
+
+#taskContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-column {
+    width: 30%;
+    background-color: var(--color-secondary);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task {
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.task-buttons {
+    margin-top: 10px;
+}
+
+.task-buttons button {
+    background-color: var(--color-accent);
+    margin-right: 5px;
+}
+
+button.delete-button {
+    background-color: #ff4d4d;
+    margin-left: 10px;
+}
+
+#personList ul {
+    list-style: none;
+    padding: 0;
+}
+
+#personList li {
+    background-color: var(--color-secondary);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#personList li button {
+    background-color: #ff4d4d;
+    border: none;
+    color: white;
+    padding: 5px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.button-div .guardar {
-    background-color: #007bff;
-    color: white;
-}
-
-.button-div .limpiar {
-    background-color: #f44336;
-    color: white;
-}
-
-.task-container {
-    display: flex;
-    gap: 20px;
-}
-
-.task-column {
-    flex: 1;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: #b42626;
-    border: 1px solid #ddd;
-    min-height: 200px;
-}
-
-.task-column h3 {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.task {
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#personList li button:hover {
+    background-color: #e56b4d;
 }
